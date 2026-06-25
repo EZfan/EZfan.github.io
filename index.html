@@ -10,16 +10,16 @@
         .lang-zh { display: none; }
         body.zh .lang-en { display: none; }
         body.zh .lang-zh { display: inline-block; }
-        
+
         /* Block level overrides for Chinese */
         body.zh div.lang-zh, body.zh p.lang-zh, body.zh h1.lang-zh, body.zh h2.lang-zh, body.zh h3.lang-zh, body.zh span.lang-zh.block-display { display: block; }
-        
+
         /* Selection color */
         ::selection {
             background-color: #000;
             color: #fff;
         }
-        
+
         /* WeChat QR tooltip */
         .wechat-qr { display: none; }
         .wechat-container:hover .wechat-qr { display: block; }
@@ -30,7 +30,7 @@
             transform: translateY(30px);
             transition: all 1s cubic-bezier(0.5, 0, 0, 1);
         }
-        
+
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
@@ -40,6 +40,20 @@
         .reveal-delay-100 { transition-delay: 100ms; }
         .reveal-delay-200 { transition-delay: 200ms; }
         .reveal-delay-300 { transition-delay: 300ms; }
+
+        /* In-review badge */
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            border-radius: 9999px;
+            background-color: #f3f4f6;
+            color: #4b5563;
+            border: 1px solid #e5e7eb;
+            letter-spacing: 0.02em;
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-900 font-sans antialiased">
@@ -55,10 +69,14 @@
                         <span class="lang-zh">范梓豪</span>
                     </a>
                 </div>
-                
+
                 <!-- Right Side -->
                 <div class="flex items-center gap-6 text-sm font-medium">
                     <div class="hidden sm:flex gap-6 text-gray-600">
+                        <a href="#publications" class="hover:text-black transition-colors">
+                            <span class="lang-en">Publications</span>
+                            <span class="lang-zh">发表</span>
+                        </a>
                         <a href="#projects" class="hover:text-black transition-colors">
                             <span class="lang-en">Projects</span>
                             <span class="lang-zh">项目</span>
@@ -113,7 +131,7 @@
                     </a>
                 </div>
             </div>
-            
+
             <!-- Avatar / Graphic (UPDATED) -->
             <div class="md:col-span-1 flex justify-center md:justify-end">
                 <!-- Added overflow-hidden to crop the image into a circle -->
@@ -195,6 +213,42 @@
             </div>
         </section>
 
+        <!-- Publications Section -->
+        <section id="publications" class="reveal">
+            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                <span class="w-1 h-6 bg-black block"></span>
+                <span class="lang-en">Publications</span>
+                <span class="lang-zh">发表</span>
+            </h2>
+
+            <div class="space-y-8">
+                <!-- Survey -->
+                <div class="group relative pl-6 border-l-2 border-gray-100 hover:border-black transition-colors duration-300">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-2">
+                        <h3 class="text-lg font-bold text-gray-900 leading-snug">
+                            The Streaming Design Space and Evidence Boundaries: A Survey of Visual Token Compression for MLLMs
+                        </h3>
+                    </div>
+
+                    <div class="text-sm text-gray-500 mb-2 italic">
+                        <span class="lang-en">Anonymous Authors &nbsp;·&nbsp; Under Review</span>
+                        <span class="lang-zh">匿名作者 &nbsp;·&nbsp; 审稿中</span>
+                        <span class="badge ml-1 lang-en" style="display:inline-block;">In Submission</span>
+                        <span class="badge ml-1 lang-zh" style="display:inline-block;">在投</span>
+                    </div>
+
+                    <p class="text-sm text-gray-600 leading-relaxed max-w-2xl">
+                        <span class="lang-en">
+                            A survey that reorganizes visual-token compression for multimodal large models around three structural dimensions (redundancy source, compression location, compression operation) and uses query timing and causality as the comparability boundary, accompanied by a Minimal Comparable Evaluation checklist for reporting latency, memory, and matched-budget baselines.
+                        </span>
+                        <span class="lang-zh">
+                            一篇关于多模态大模型视觉 token 压缩的综述：以"冗余来源—压缩位置—压缩操作"三个结构维度重新组织该领域,并以查询时序与因果性作为方法间可比性的边界,配套提出最小可比评估(MCE)清单,涵盖时延、显存与匹配预算基线等报告要求。
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <!-- Projects Section -->
         <section id="projects" class="reveal">
             <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
@@ -202,12 +256,45 @@
                 <span class="lang-en">Selected Projects</span>
                 <span class="lang-zh">精选项目</span>
             </h2>
-            
+
             <div class="space-y-8">
-                <p class="text-gray-500 italic text-sm">
-                    <span class="lang-en">Projects to be updated...</span>
-                    <span class="lang-zh">项目更新中...</span>
-                </p>
+                <!-- Project 1: OCM -->
+                <div class="group relative pl-6 border-l-2 border-gray-100 hover:border-black transition-colors duration-300">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-2">
+                        <h3 class="text-lg font-bold text-gray-900">
+                            OCM: Streaming Visual Token Compression for MLLMs
+                            <span class="badge ml-2 lang-en" style="display:inline-block;">In Progress</span>
+                            <span class="badge ml-2 lang-zh" style="display:inline-block;">进行中</span>
+                        </h3>
+                    </div>
+
+                    <p class="text-sm text-gray-600 leading-relaxed max-w-2xl">
+                        <span class="lang-en">
+                            A streaming visual token compression method for multimodal LLMs, evaluated on long-video benchmarks. A unified evaluation pipeline is being built around decord-based decoding, plug-in model adapters, and structured run-level metrics.
+                        </span>
+                        <span class="lang-zh">
+                            一种面向多模态大模型的流式视觉 token 压缩方法,目前正在长视频基准上评估。基于 decord 解码、模型插件化与结构化运行级指标,正在搭建统一的评测管线。
+                        </span>
+                    </p>
+                </div>
+
+                <!-- Project 2: Polite Mask -->
+                <div class="group relative pl-6 border-l-2 border-gray-100 hover:border-black transition-colors duration-300">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-2">
+                        <h3 class="text-lg font-bold text-gray-900">
+                            Polite Mask: Affect-Related Directions in Aligned LLMs
+                        </h3>
+                    </div>
+
+                    <p class="text-sm text-gray-600 leading-relaxed max-w-2xl">
+                        <span class="lang-en">
+                            A mechanistic interpretability study of an affect-related direction in the residual stream of instruction-tuned LLMs, examining its causal role in compliance-sensitive behavior, cross-model transfer, and robustness across affect supervision sources.
+                        </span>
+                        <span class="lang-zh">
+                            对指令微调大语言模型残差流中"情感相关方向"的机制可解释性研究,考察其在依从相关行为中的因果作用、跨模型迁移性,以及在不同情感监督来源下的鲁棒性。
+                        </span>
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -235,11 +322,11 @@
                     My academic journey is driven by a curiosity to understand intelligence itself. I started with the fundamentals of Deep Learning, moved towards the dynamic world of Reinforcement Learning, and I am currently dedicating my research efforts to Multimodal Large Models.
                 </p>
                 <p class="lang-zh mb-4">
-                    我的学术探索源于对“智能”本质的好奇。我从深度学习的基础理论起步，深入探索了强化学习的动态世界，目前正致力于多模态大模型的研究。
+                    我的学术探索源于对"智能"本质的好奇。我从深度学习的基础理论起步,深入探索了强化学习的动态世界,目前正致力于多模态大模型的研究。
                 </p>
                 <p class="italic border-l-2 border-gray-300 pl-4">
                     <span class="lang-en">"Passionate about bridging the gap between theoretical AI and practical applications."</span>
-                    <span class="lang-zh">“热衷于消除人工智能理论与实际应用之间的鸿沟。”</span>
+                    <span class="lang-zh">"热衷于消除人工智能理论与实际应用之间的鸿沟。"</span>
                 </p>
             </div>
         </section>
@@ -253,7 +340,7 @@
                     <h2 class="text-lg font-bold mb-1">Zihao Fan</h2>
                     <p class="text-sm text-gray-500">Shenzhen University</p>
                 </div>
-                
+
                 <div class="flex flex-col sm:flex-row gap-6 sm:gap-12 text-sm">
                     <!-- Email -->
                     <div class="flex items-center gap-2">
@@ -270,7 +357,7 @@
                             Add me on WeChat
                         </div>
                     </div>
-                    
+
                     <!-- GitHub -->
                     <div class="flex items-center gap-2">
                         <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
@@ -307,7 +394,7 @@
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
                     // Optional: Stop observing once revealed so it doesn't fade out again
-                    observer.unobserve(entry.target); 
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
