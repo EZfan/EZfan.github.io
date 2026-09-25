@@ -41,6 +41,9 @@
         .reveal-delay-200 { transition-delay: 200ms; }
         .reveal-delay-300 { transition-delay: 300ms; }
 
+        /* Badges: .lang-zh must win over .badge's own display rule in EN mode */
+        .lang-zh.badge { display: none; }
+
         /* In-review badge */
         .badge {
             display: inline-block;
@@ -248,8 +251,8 @@
                     <div class="text-sm text-gray-500 mb-2 italic">
                         <span class="lang-en">Anonymous Authors &nbsp;·&nbsp; Under Review at ICLR 2027</span>
                         <span class="lang-zh">匿名作者 &nbsp;·&nbsp; ICLR 2027 在投</span>
-                        <span class="badge ml-1 lang-en" style="display:inline-block;">First Author</span>
-                        <span class="badge ml-1 lang-zh" style="display:inline-block;">一作</span>
+                        <span class="badge ml-1 lang-en">First Author</span>
+                        <span class="badge ml-1 lang-zh">一作</span>
                     </div>
 
                     <p class="text-sm text-gray-600 leading-relaxed max-w-2xl">
@@ -273,8 +276,8 @@
                     <div class="text-sm text-gray-500 mb-2 italic">
                         <span class="lang-en">Anonymous Authors &nbsp;·&nbsp; Under Review at ICLR 2027</span>
                         <span class="lang-zh">匿名作者 &nbsp;·&nbsp; ICLR 2027 在投</span>
-                        <span class="badge ml-1 lang-en" style="display:inline-block;">First Author</span>
-                        <span class="badge ml-1 lang-zh" style="display:inline-block;">一作</span>
+                        <span class="badge ml-1 lang-en">First Author</span>
+                        <span class="badge ml-1 lang-zh">一作</span>
                     </div>
 
                     <p class="text-sm text-gray-600 leading-relaxed max-w-2xl">
@@ -298,10 +301,10 @@
                     <div class="text-sm text-gray-500 mb-2 italic">
                         <span class="lang-en">Anonymous Authors &nbsp;·&nbsp; Under Review at IEEE T-PAMI</span>
                         <span class="lang-zh">匿名作者 &nbsp;·&nbsp; 投稿至 IEEE T-PAMI</span>
-                        <span class="badge ml-1 lang-en" style="display:inline-block;">First Author</span>
-                        <span class="badge ml-1 lang-zh" style="display:inline-block;">一作</span>
-                        <span class="badge ml-1 lang-en" style="display:inline-block;">In Submission</span>
-                        <span class="badge ml-1 lang-zh" style="display:inline-block;">在投</span>
+                        <span class="badge ml-1 lang-en">First Author</span>
+                        <span class="badge ml-1 lang-zh">一作</span>
+                        <span class="badge ml-1 lang-en">In Submission</span>
+                        <span class="badge ml-1 lang-zh">在投</span>
                     </div>
 
                     <p class="text-sm text-gray-600 leading-relaxed max-w-2xl">
@@ -323,12 +326,12 @@
                     </div>
 
                     <div class="text-sm text-gray-500 mb-2">
-                        <span class="badge lang-en" style="display:inline-block;">First Author</span>
-                        <span class="badge lang-zh" style="display:inline-block;">一作</span>
-                        <span class="badge ml-1 lang-en" style="display:inline-block;">Targeting CVPR</span>
-                        <span class="badge ml-1 lang-zh" style="display:inline-block;">预投 CVPR</span>
-                        <span class="badge ml-1 lang-en" style="display:inline-block;">In Preparation</span>
-                        <span class="badge ml-1 lang-zh" style="display:inline-block;">准备中</span>
+                        <span class="badge lang-en">First Author</span>
+                        <span class="badge lang-zh">一作</span>
+                        <span class="badge ml-1 lang-en">Targeting CVPR</span>
+                        <span class="badge ml-1 lang-zh">预投 CVPR</span>
+                        <span class="badge ml-1 lang-en">In Preparation</span>
+                        <span class="badge ml-1 lang-zh">准备中</span>
                     </div>
 
                     <p class="text-sm text-gray-600 leading-relaxed max-w-2xl">
