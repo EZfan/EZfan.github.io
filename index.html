@@ -152,32 +152,32 @@
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <div class="p-6 bg-black text-white rounded border border-black shadow-lg">
                     <h3 class="font-bold text-lg mb-2">
+                        <span class="lang-en">LLM Agents</span>
+                        <span class="lang-zh">LLM 智能体</span>
+                    </h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        <span class="lang-en">Analysis-first research on agent systems: memory bottlenecks, observation staleness, and decision reliability in computer-use and tool-use agents.</span>
+                        <span class="lang-zh">以分析为先的智能体研究:computer-use 与工具使用 agent 的记忆瓶颈、观测过时与决策可靠性。</span>
+                    </p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded border border-gray-100 hover:border-gray-300 transition-colors">
+                    <h3 class="font-bold text-lg mb-2">
                         <span class="lang-en">Vision-Language Models</span>
                         <span class="lang-zh">视觉-语言大模型</span>
                     </h3>
-                    <p class="text-sm text-gray-300 leading-relaxed">
-                        <span class="lang-en">Core focus: building reliable VLMs for long-context video and real-world deployment.</span>
-                        <span class="lang-zh">核心方向:构建面向长视频与现实落地的可靠视觉-语言大模型。</span>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        <span class="lang-en">Behavioral and diagnostic analysis of VLMs under long context, streaming perception, and real-world deployment.</span>
+                        <span class="lang-zh">长上下文、流式感知与现实落地条件下视觉-语言大模型的行为与诊断分析。</span>
                     </p>
                 </div>
                 <div class="p-6 bg-gray-50 rounded border border-gray-100 hover:border-gray-300 transition-colors">
                     <h3 class="font-bold text-lg mb-2">
-                        <span class="lang-en">Efficient LLMs &amp; VLMs</span>
-                        <span class="lang-zh">高效 LLM / VLM</span>
+                        <span class="lang-en">LLM Interpretability &amp; Analysis</span>
+                        <span class="lang-zh">LLM 可解释性与分析</span>
                     </h3>
                     <p class="text-sm text-gray-600 leading-relaxed">
-                        <span class="lang-en">Token compression, streaming inference, and budget allocation across the MLLM pipeline.</span>
-                        <span class="lang-zh">Token 压缩、流式推理,以及面向 MLLM 流水线的预算分配。</span>
-                    </p>
-                </div>
-                <div class="p-6 bg-gray-50 rounded border border-gray-100 hover:border-gray-300 transition-colors">
-                    <h3 class="font-bold text-lg mb-2">
-                        <span class="lang-en">Interpretability &amp; Analysis</span>
-                        <span class="lang-zh">可解释性与分析</span>
-                    </h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                        <span class="lang-en">Mechanistic study of internal representations and behaviors in aligned LLMs.</span>
-                        <span class="lang-zh">面向对齐 LLM 内部表征与行为的机制化研究。</span>
+                        <span class="lang-en">Interpretability and intervention studies of aligned LLMs: activation steering, measurement validity, and evaluation reliability.</span>
+                        <span class="lang-zh">面向对齐 LLM 的可解释性与干预研究:激活干预、测量效度与评测可靠性。</span>
                     </p>
                 </div>
             </div>
@@ -310,6 +310,33 @@
                         </span>
                         <span class="lang-zh">
                             一篇关于多模态大模型视觉 token 压缩的综述：以"冗余来源—压缩位置—压缩操作"三个结构维度重新组织该领域,并以查询时序与因果性作为方法间可比性的边界,配套提出最小可比评估(MCE)清单,涵盖时延、显存与匹配预算基线等报告要求。
+                        </span>
+                    </p>
+                </div>
+
+                <!-- Publication 4: FreshCUA (targeting CVPR, in preparation) -->
+                <div class="group relative pl-6 border-l-2 border-gray-100 hover:border-black transition-colors duration-300">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-2">
+                        <h3 class="text-lg font-bold text-gray-900 leading-snug">
+                            When Should Computer-Use Agents Look Again? Separating Visual Change, Observation Need, and Refresh Utility
+                        </h3>
+                    </div>
+
+                    <div class="text-sm text-gray-500 mb-2">
+                        <span class="badge lang-en" style="display:inline-block;">First Author</span>
+                        <span class="badge lang-zh" style="display:inline-block;">一作</span>
+                        <span class="badge ml-1 lang-en" style="display:inline-block;">Targeting CVPR</span>
+                        <span class="badge ml-1 lang-zh" style="display:inline-block;">预投 CVPR</span>
+                        <span class="badge ml-1 lang-en" style="display:inline-block;">In Preparation</span>
+                        <span class="badge ml-1 lang-zh" style="display:inline-block;">准备中</span>
+                    </div>
+
+                    <p class="text-sm text-gray-600 leading-relaxed max-w-2xl">
+                        <span class="lang-en">
+                            Computer-use agents act on screenshots that go stale between capture and decision — and the agent's own actions are a first-class source of that staleness. We introduce a counterfactual protocol with programmatically verified ground truth that separates visual change, goal-conditioned observation need, and realized refresh utility, evaluated on three agents across 36 templated tasks plus exact goal-swap and crossed-goal suites. Forcing a stale branch costs 44–55 pp of success; with byte-identical observations, flipping only the goal moves the refresh effect from +79–94 pp to ≈0; and even in a never-changing environment, an agent acting on a stale frame tends to re-execute the action it just completed.
+                        </span>
+                        <span class="lang-zh">
+                            computer-use agent 基于截图行动,而截图在捕获与决策之间会"变旧"——我们进一步发现,agent 自身的动作正是观测过时的一等来源。我们提出一套带程序化验证真值的反事实协议,将视觉变化、目标条件化的观测需求与重观测的实际效用分开测量,在 3 个 agent、36 个模板化任务及精确 goal-swap / crossed-goal 套件上评估。强制使用过时观测会损失 44–55pp 成功率;字节级相同的观测下仅翻转目标,刷新效应就从 +79–94pp 变为 ≈0;即便环境从不自发变化,基于旧帧行动的 agent 也倾向于重复执行刚完成的动作。
                         </span>
                     </p>
                 </div>
