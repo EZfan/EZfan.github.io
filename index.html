@@ -257,7 +257,7 @@
                             An improved target score alone does not establish that activation steering produced the intended behavior. Using seven model variants, 105,000 generation records, and a separate vector-extraction audit, we show three ways a target delta can mislead: the extracted intervention itself shifts with input rendering, the readout can misalign with the intended construct, and outputs can degrade even as target metrics improve (a 56 pp drop in harmful compliance co-occurring with a 96 pp rise in degraded outputs). We argue that steering claims require three accompanying checks: a precise intervention specification, a readout aligned with the intended construct, and an audit of output usability.
                         </span>
                         <span class="lang-zh">
-                            目标分数的改善本身并不能证明 activation steering 产生了预期行为。基于 7 个模型变体、105,000 条生成记录与独立的向量提取审计,我们给出 target delta 误导结论的三种方式:提取出的干预会随输入渲染方式而改变、读出指标可能与目标构念不对齐、以及目标分数变好的同时输出发生退化(jailbreak 设置中 harmful compliance 下降 56pp 的同时 degraded outputs 上升 96pp)。我们主张 steering 结论需要三项配套检验:精确的干预规约、与构念对齐的读出方式,以及输出可用性审计。
+                            目标分数的改善本身并不能证明激活干预(activation steering)产生了预期行为。基于 7 个模型变体、105,000 条生成记录与独立的向量提取审计,我们给出目标分数变化误导结论的三种方式:提取出的干预方向会随输入渲染方式而改变、读出指标可能与目标构念不对齐、以及目标分数变好的同时输出质量退化(在越狱设置中,有害指令服从率下降 56 个百分点的同时,退化输出占比上升 96 个百分点)。我们主张激活干预的结论需要三项配套检验:精确的干预规约、与构念对齐的读出方式,以及输出可用性审计。
                         </span>
                     </p>
                 </div>
@@ -282,7 +282,7 @@
                             Memory-agent failures are often localized by repairing one pipeline stage with an oracle and reading the recovered accuracy as a bottleneck label — valid only if that label is stable when other stages are repaired. Using factorial repairs of upstream state, retrieval, and read context, we find upstream-state and read-context repairs individually large yet strongly substitutive: either looks decisive in isolation but contributes little once the other is present. We further show that reference-guided judges produce false-positive rates that vary across intervention cells, inflating the apparent importance of retrieval — so stage diagnosis needs conditional repair surfaces together with cellwise checks of scoring reliability.
                         </span>
                         <span class="lang-zh">
-                            agent memory 的失败常通过 oracle 修复单一阶段、以恢复的任务准确率来定位 bottleneck——但这只在该标签在其他阶段被修复时仍然稳定才成立。通过对上游状态、检索与读取上下文做因子化修复,我们发现上游状态与读取上下文的修复单独看都很大、却强烈可替代:单独看任何一个都像决定性瓶颈,给定另一个后边际贡献却很小。我们进一步发现参考引导的裁判会产生随干预格子变化的假阳性,虚增检索的表观重要性——因此阶段诊断需要条件化的修复表面,以及逐格的打分可靠性检查。
+                            智能体记忆系统的失败,通常通过「先知修复」单一流水线阶段、以恢复的任务准确率来定位瓶颈——但这一标签只在其他阶段同时被修复时仍然稳定才成立。通过对上游状态、检索与读取上下文做因子化修复,我们发现上游状态与读取上下文的修复单独看收益都很大、却高度可替代:单独看任何一个都像决定性瓶颈,给定另一个之后边际贡献却很小。我们进一步发现参考引导的自动裁判会产生随干预组合变化的假阳性,虚增检索环节的表观重要性——因此阶段诊断应报告条件化的修复表面,并逐格检查打分可靠性。
                         </span>
                     </p>
                 </div>
@@ -309,7 +309,7 @@
                             A survey that reorganizes visual-token compression for multimodal large models around three structural dimensions (redundancy source, compression location, compression operation) and uses query timing and causality as the comparability boundary, accompanied by a Minimal Comparable Evaluation checklist for reporting latency, memory, and matched-budget baselines.
                         </span>
                         <span class="lang-zh">
-                            一篇关于多模态大模型视觉 token 压缩的综述：以"冗余来源—压缩位置—压缩操作"三个结构维度重新组织该领域,并以查询时序与因果性作为方法间可比性的边界,配套提出最小可比评估(MCE)清单,涵盖时延、显存与匹配预算基线等报告要求。
+                            一篇关于多模态大模型视觉词元压缩的综述:以「冗余来源—压缩位置—压缩操作」三个结构维度重新组织该领域,并以查询时序与因果性作为方法间可比性的边界;配套提出最小可比评估(MCE)清单,涵盖时延、显存与匹配预算基线等报告要求。
                         </span>
                     </p>
                 </div>
@@ -336,7 +336,7 @@
                             Screenshots of computer-use agents go stale, yet staleness alone does not decide the outcome — what matters is whether current state is delivered through an interface the actor can actually use. With paired interventions (semantic / geometry / both / quiet) on frozen synthetic banks and independent real apps across seven actors, we decompose stale-evidence failure into unit mismatch and output-interface gaps: position text as page pixels fails and even harms, while unit-aligned text and ID→box execution match fresh screenshots (unit alignment alone +.40–.55; out-of-domain coordinates 42.9%→1.7% on a 27B model; fresh still beats stale-only by ≈.43). Calibration artifacts are treated as first-class results — a ground-truth validity audit, a probe-gap census, and repaired metric semantics — alongside evidence that genuine post-error recovery is nearly absent (1/96).
                         </span>
                         <span class="lang-zh">
-                            computer-use agent 依赖的截图会过时,但"过时"本身并不决定成败——关键是当前状态能否经由该 actor 真正可用的接口送达。我们在冻结的合成任务库与独立真实应用上,以配对干预(语义/几何/两者/静默)、七个 actor,把旧证据失败拆解为"单位失配"与"输出接口缺口"两类:以页面像素坐标呈现的位置文本失败甚至有害,而单位对齐文本与 ID→box 执行可以追平新截图(仅单位对齐即 +.40–.55;27B 模型的跨域坐标率 42.9%→1.7%;新截图仍领先纯旧证据 ≈.43)。校准问题同样作为一等结果:真值有效性审计、探针盲区普查与修复后的指标语义;并给出错误后真实恢复近乎不存在(1/96)的证据。
+                            计算机使用智能体依赖的屏幕截图会过时,但「过时」本身并不决定任务成败——关键是当前状态能否经由该智能体真正可用的接口送达。我们在冻结的合成任务库与独立真实应用上,以配对干预(语义/几何/两者/静默)、七个智能体,把旧证据导致的失败拆解为「单位失配」与「输出接口缺口」两类:以页面像素坐标呈现的位置文本无效甚至有害,而单位对齐文本与「编号→边界框」执行可以追平新截图(仅单位对齐即带来 +.40–.55 的提升;27B 模型的越界坐标率从 42.9% 降至 1.7%;新截图仍领先纯旧证据约 .43)。校准问题同样作为一等结果:真值有效性审计、探针盲区普查与修正后的指标语义;并给出错误发生后真实恢复近乎不存在(1/96)的证据。
                         </span>
                     </p>
                 </div>
