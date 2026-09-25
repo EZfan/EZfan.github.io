@@ -318,7 +318,7 @@
                 <div class="group relative pl-6 border-l-2 border-gray-100 hover:border-black transition-colors duration-300">
                     <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-2">
                         <h3 class="text-lg font-bold text-gray-900 leading-snug">
-                            When Should Computer-Use Agents Look Again? Separating Visual Change, Observation Need, and Refresh Utility
+                            When Does Stale Screen Evidence Still Support Correct Actions? Interface-Matched State Delivery for Computer-Use Agents
                         </h3>
                     </div>
 
@@ -333,10 +333,10 @@
 
                     <p class="text-sm text-gray-600 leading-relaxed max-w-2xl">
                         <span class="lang-en">
-                            Computer-use agents act on screenshots that go stale between capture and decision — and the agent's own actions are a first-class source of that staleness. We introduce a counterfactual protocol with programmatically verified ground truth that separates visual change, goal-conditioned observation need, and realized refresh utility, evaluated on three agents across 36 templated tasks plus exact goal-swap and crossed-goal suites. Forcing a stale branch costs 44–55 pp of success; with byte-identical observations, flipping only the goal moves the refresh effect from +79–94 pp to ≈0; and even in a never-changing environment, an agent acting on a stale frame tends to re-execute the action it just completed.
+                            Screenshots of computer-use agents go stale, yet staleness alone does not decide the outcome — what matters is whether current state is delivered through an interface the actor can actually use. With paired interventions (semantic / geometry / both / quiet) on frozen synthetic banks and independent real apps across seven actors, we decompose stale-evidence failure into unit mismatch and output-interface gaps: position text as page pixels fails and even harms, while unit-aligned text and ID→box execution match fresh screenshots (unit alignment alone +.40–.55; out-of-domain coordinates 42.9%→1.7% on a 27B model; fresh still beats stale-only by ≈.43). Calibration artifacts are treated as first-class results — a ground-truth validity audit, a probe-gap census, and repaired metric semantics — alongside evidence that genuine post-error recovery is nearly absent (1/96).
                         </span>
                         <span class="lang-zh">
-                            computer-use agent 基于截图行动,而截图在捕获与决策之间会"变旧"——我们进一步发现,agent 自身的动作正是观测过时的一等来源。我们提出一套带程序化验证真值的反事实协议,将视觉变化、目标条件化的观测需求与重观测的实际效用分开测量,在 3 个 agent、36 个模板化任务及精确 goal-swap / crossed-goal 套件上评估。强制使用过时观测会损失 44–55pp 成功率;字节级相同的观测下仅翻转目标,刷新效应就从 +79–94pp 变为 ≈0;即便环境从不自发变化,基于旧帧行动的 agent 也倾向于重复执行刚完成的动作。
+                            computer-use agent 依赖的截图会过时,但"过时"本身并不决定成败——关键是当前状态能否经由该 actor 真正可用的接口送达。我们在冻结的合成任务库与独立真实应用上,以配对干预(语义/几何/两者/静默)、七个 actor,把旧证据失败拆解为"单位失配"与"输出接口缺口"两类:以页面像素坐标呈现的位置文本失败甚至有害,而单位对齐文本与 ID→box 执行可以追平新截图(仅单位对齐即 +.40–.55;27B 模型的跨域坐标率 42.9%→1.7%;新截图仍领先纯旧证据 ≈.43)。校准问题同样作为一等结果:真值有效性审计、探针盲区普查与修复后的指标语义;并给出错误后真实恢复近乎不存在(1/96)的证据。
                         </span>
                     </p>
                 </div>
